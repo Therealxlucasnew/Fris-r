@@ -25,6 +25,7 @@ body {
   color: var(--ink);
   font-family: Inter, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 img {
@@ -662,6 +663,9 @@ h3 {
   .site-header {
     grid-template-columns: minmax(0, 1fr) auto;
     justify-content: stretch;
+    gap: 12px;
+    width: 100%;
+    padding-right: 82px;
   }
 
   .site-nav,
@@ -671,14 +675,17 @@ h3 {
   }
 
   .nav-toggle {
-    display: grid;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 25;
+    display: grid !important;
     width: 46px;
     height: 46px;
     place-items: center;
     border: 1px solid rgba(255, 253, 248, 0.3);
     border-radius: var(--radius);
     background: transparent;
-    justify-self: end;
   }
 
   .nav-toggle span {
@@ -688,8 +695,8 @@ h3 {
   }
 
   .site-header.is-open .site-nav {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 82px;
     right: 18px;
     left: auto;
     width: min(320px, calc(100vw - 36px));
@@ -706,8 +713,8 @@ h3 {
 
   .site-header.is-open .language-switch-mobile {
     display: inline-flex;
-    justify-self: start;
-    margin: 14px 22px 18px;
+    justify-self: center;
+    margin: 14px auto 18px;
   }
 
   .booking-panel {

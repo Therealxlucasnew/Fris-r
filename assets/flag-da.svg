@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Dansk">
+  <defs>
+    <clipPath id="r">
+      <rect width="512" height="370" y="71" rx="56"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="512" height="512" fill="#c8102e"/>
+    <path d="M184 71v370M0 256h512" stroke="#f3f3f3" stroke-width="58"/>
+  </g>
+</svg>

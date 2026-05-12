@@ -237,3 +237,39 @@ applyLanguage(savedLanguage || browserLanguage);
 
 const today = new Date().getDay();
 document.querySelector(`[data-hours] [data-day="${today}"]`)?.classList.add("is-today");
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealItems = document.querySelectorAll("[data-reveal]");
+
+if (prefersReducedMotion) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else {
+  revealItems.forEach((item, index) => {
+    const explicitDelay = item.dataset.revealDelay;
+    const autoDelay = item.dataset.reveal === "line" ? Math.min(index * 18, 220) : 0;
+    item.style.setProperty("--reveal-delay", `${explicitDelay ?? autoDelay}ms`);
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const heroImage = document.querySelector(".hero-media img");
+  const updateHeroMotion = () => {
+    if (!heroImage) return;
+    const offset = Math.min(window.scrollY * 0.06, 44);
+    heroImage.style.transform = `scale(1.04) translate3d(0, ${offset}px, 0)`;
+  };
+
+  updateHeroMotion();
+  window.addEventListener("scroll", updateHeroMotion, { passive: true });
+}

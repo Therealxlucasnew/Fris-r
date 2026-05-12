@@ -195,6 +195,8 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transform: scale(1.04);
+  transition: transform 900ms ease;
 }
 
 .hero-media::after {
@@ -270,6 +272,24 @@ h3 {
 .button.secondary {
   border: 1px solid rgba(255, 253, 248, 0.42);
   color: var(--white);
+}
+
+.button,
+.header-cta,
+.booking-panel a,
+.booking-options a,
+.contact-card a,
+.lang-button {
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover,
+.header-cta:hover,
+.booking-panel a:hover,
+.booking-options a:hover,
+.contact-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .booking-panel {
@@ -369,6 +389,14 @@ h3 {
   background: var(--white);
   border: 1px solid rgba(27, 27, 26, 0.08);
   border-radius: var(--radius);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.service-card:hover,
+.google-review:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(27, 27, 26, 0.16);
+  border-color: rgba(184, 138, 68, 0.32);
 }
 
 .service-card img {
@@ -376,6 +404,12 @@ h3 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   filter: saturate(0.92) contrast(1.04);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.02) contrast(1.08);
 }
 
 .service-card div {
@@ -424,6 +458,24 @@ h3 {
   min-height: 48px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 253, 248, 0.14);
+  position: relative;
+}
+
+.price-list div::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: var(--brass);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms ease;
+}
+
+.price-list div.is-visible::after {
+  transform: scaleX(1);
 }
 
 .price-list span {
@@ -560,6 +612,7 @@ h3 {
   background: #fff;
   border: 1px solid rgba(27, 27, 26, 0.08);
   border-radius: var(--radius);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
 }
 
 .review-top {
@@ -657,6 +710,51 @@ h3 {
 .site-footer a {
   color: var(--white);
   font-weight: 800;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity 760ms ease, transform 760ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="left"] {
+  transform: translate3d(34px, 0, 0);
+}
+
+[data-reveal="right"] {
+  transform: translate3d(-34px, 0, 0);
+}
+
+[data-reveal="line"] {
+  transform: translate3d(0, 16px, 0);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 980px) {

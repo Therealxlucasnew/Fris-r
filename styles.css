@@ -539,6 +539,40 @@ h3 {
   content: "";
 }
 
+.booking-section {
+  background: var(--ivory);
+}
+
+.booking-frame-wrap {
+  overflow: visible;
+  background: var(--white);
+  border: 1px solid rgba(27, 27, 26, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 22px 60px rgba(27, 27, 26, 0.12);
+}
+
+.booking-frame {
+  display: block;
+  width: 100%;
+  height: 1100px;
+  min-height: 1100px;
+  border: 0;
+  background: var(--white);
+}
+
+.booking-fallback {
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.booking-fallback a {
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 4px;
+}
+
 .reviews {
   display: grid;
   grid-template-columns: minmax(280px, 0.72fr) minmax(360px, 1.28fr);
@@ -891,4 +925,5 @@ h3 {
     flex-direction: column;
     gap: 4px;
   }
+
 }

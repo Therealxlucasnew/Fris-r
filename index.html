@@ -53,7 +53,7 @@
           <span>English</span>
         </button>
       </div>
-      <a class="header-cta" href="tel:+4571691925" data-i18n="bookTime">Book tid</a>
+      <a class="header-cta" href="#booking" data-i18n="bookTime">Book tid</a>
     </header>
 
     <main id="top">
@@ -70,15 +70,15 @@
           </h1>
           <p class="hero-copy" data-i18n="heroCopy">Rent snit. God stil. Lokal frisør til fade, herreklip, styling og skægtrim.</p>
           <div class="hero-actions">
-            <a class="button primary" href="tel:+4571691925" data-i18n="bookPhone">Book tid på 71 69 19 25</a>
+            <a class="button primary" href="#booking" data-i18n="bookOnline">Book tid online</a>
             <a class="button secondary" href="#services" data-i18n="seeServices">Se ydelser</a>
           </div>
         </div>
         <aside class="booking-panel" aria-label="Hurtig booking" data-i18n-attr="aria-label:quickBookingAria">
           <span class="panel-label" data-i18n="nextCut">Næste klip</span>
-          <strong data-i18n="callBook">Ring og book direkte</strong>
-          <p data-i18n="bookingText">Fortæl hvilken behandling du ønsker, så finder vi en tid der passer.</p>
-          <a href="tel:+4571691925" data-i18n="callNow">Ring nu</a>
+          <strong data-i18n="bookPlanwayTitle">Book direkte online</strong>
+          <p data-i18n="bookingText">Vælg behandling og tid i Planway, så er din næste klipning klar.</p>
+          <a href="#booking" data-i18n="bookOnline">Book tid online</a>
         </aside>
       </section>
 
@@ -151,7 +151,7 @@
           </div>
           <p class="price-note" data-i18n="priceNote">Med og uden bestillingstider. Ring for at booke eller høre om ledige tider.</p>
           <div class="booking-options">
-            <a href="tel:+4571691925" data-i18n="callPhone">Ring 71 69 19 25</a>
+            <a href="#booking" data-i18n="bookOnline">Book tid online</a>
             <a href="https://www.google.com/maps/search/?api=1&query=HF%20Cut%20Fris%C3%B8r%20Smakkeg%C3%A5rdsvej%20173%202820%20Gentofte" target="_blank" rel="noreferrer" data-i18n="directions">Find vej</a>
           </div>
         </div>
@@ -163,6 +163,30 @@
             <li data-i18n="note3">Salonen ligger lokalt på Smakkegårdsvej med nem adgang fra Gentofte.</li>
           </ul>
         </div>
+      </section>
+
+      <section class="section booking-section" id="booking">
+        <div class="section-heading" data-reveal="up">
+          <p class="eyebrow" data-i18n="bookingEyebrow">Online booking</p>
+          <h2 data-i18n="bookingSectionTitle">Book din tid hos HF Cut</h2>
+          <p data-i18n="bookingSectionText">Vælg behandling og ledig tid direkte her på siden.</p>
+        </div>
+        <div class="booking-frame-wrap" data-reveal="up" data-reveal-delay="120">
+          <iframe
+            class="booking-frame"
+            src="https://hf-cut.planway.com"
+            width="100%"
+            height="1100"
+            frameborder="0"
+            title="Book tid hos HF Cut Frisør"
+            data-i18n-attr="title:bookingFrameTitle"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="booking-fallback">
+          <span data-i18n="bookingFallbackText">Hvis booking ikke vises korrekt, kan du åbne Planway her:</span>
+          <a href="https://hf-cut.planway.com" target="_blank" rel="noreferrer" data-i18n="bookingFallbackLink">Åbn booking</a>
+        </p>
       </section>
 
       <section class="section reviews" id="reviews">
@@ -235,7 +259,7 @@
 
     <footer class="site-footer">
       <p data-i18n="footerText">HF Cut Frisør - Smakkegårdsvej 173, st. mf, 2820 Gentofte</p>
-      <a href="tel:+4571691925" data-i18n="footerBook">Book tid: 71 69 19 25</a>
+      <a href="#booking" data-i18n="footerBook">Book tid online</a>
     </footer>
 
     <script src="script.js"></script>

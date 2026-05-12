@@ -6,8 +6,9 @@
     <meta
       name="description"
       content="HF Cut Frisør i Gentofte. Skarp klipning, fade og skægtrim på Smakkegårdsvej 173. Book tid på telefon 71 69 19 25."
+      data-i18n-attr="content:metaDescription"
     >
-    <title>HF Cut Frisør | Skarp klipning i Gentofte</title>
+    <title data-i18n="pageTitle">HF Cut Frisør | Skarp klipning i Gentofte</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -15,205 +16,216 @@
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="HF Cut Frisør forside">
+      <a class="brand" href="#top" aria-label="HF Cut Frisør forside" data-i18n-attr="aria-label:brandAria">
         <img class="brand-logo" src="assets/hf-cut-logo-1x1-transparent.png" alt="" aria-hidden="true">
         <span>
-          <strong>HF Cut Frisør</strong>
-          <small>Frisør / Barber</small>
+          <strong data-i18n="brandName">HF Cut Frisør</strong>
+          <small data-i18n="brandSub">Frisør / Barber</small>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle aria-label="Åbn menu" data-i18n-attr="aria-label:menuAria">
         <span></span>
         <span></span>
       </button>
       <nav class="site-nav" id="site-nav" data-nav>
-        <a href="#services">Ydelser</a>
-        <a href="#reviews">Anmeldelser</a>
-        <a href="#hours">Åbningstider</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#services" data-i18n="navServices">Ydelser</a>
+        <a href="#reviews" data-i18n="navReviews">Anmeldelser</a>
+        <a href="#hours" data-i18n="navHours">Åbningstider</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
       </nav>
-      <a class="header-cta" href="tel:+4571691925">Book tid</a>
+      <div class="language-switch" aria-label="Vælg sprog" data-i18n-attr="aria-label:languageAria">
+        <button class="lang-button is-active" type="button" data-lang="da" aria-pressed="true">
+          <span aria-hidden="true">🇩🇰</span>
+          <span>Dansk</span>
+        </button>
+        <button class="lang-button" type="button" data-lang="en" aria-pressed="false">
+          <span aria-hidden="true">🇬🇧</span>
+          <span>English</span>
+        </button>
+      </div>
+      <a class="header-cta" href="tel:+4571691925" data-i18n="bookTime">Book tid</a>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-media" aria-hidden="true">
-          <img
-            src="assets/facade.png"
-            alt=""
-          >
+          <img src="assets/facade.png" alt="">
         </div>
         <div class="hero-content">
-          <p class="eyebrow">Smakkegårdsvej 173, Gentofte</p>
-          <h1><span>Skarp</span><span>klipning i</span><span>Gentofte</span></h1>
-          <p class="hero-copy">Rent snit. God stil. Lokal frisør til fade, herreklip, styling og skægtrim.</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Smakkegårdsvej 173, Gentofte</p>
+          <h1>
+            <span data-i18n="heroTitle1">Skarp</span>
+            <span data-i18n="heroTitle2">klipning i</span>
+            <span data-i18n="heroTitle3">Gentofte</span>
+          </h1>
+          <p class="hero-copy" data-i18n="heroCopy">Rent snit. God stil. Lokal frisør til fade, herreklip, styling og skægtrim.</p>
           <div class="hero-actions">
-            <a class="button primary" href="tel:+4571691925">Book tid på 71 69 19 25</a>
-            <a class="button secondary" href="#services">Se ydelser</a>
+            <a class="button primary" href="tel:+4571691925" data-i18n="bookPhone">Book tid på 71 69 19 25</a>
+            <a class="button secondary" href="#services" data-i18n="seeServices">Se ydelser</a>
           </div>
         </div>
-        <aside class="booking-panel" aria-label="Hurtig booking">
-          <span class="panel-label">Naeste klip</span>
-          <strong>Ring og book direkte</strong>
-          <p>Fortæl hvilken behandling du ønsker, så finder vi en tid der passer.</p>
-          <a href="tel:+4571691925">Ring nu</a>
+        <aside class="booking-panel" aria-label="Hurtig booking" data-i18n-attr="aria-label:quickBookingAria">
+          <span class="panel-label" data-i18n="nextCut">Næste klip</span>
+          <strong data-i18n="callBook">Ring og book direkte</strong>
+          <p data-i18n="bookingText">Fortæl hvilken behandling du ønsker, så finder vi en tid der passer.</p>
+          <a href="tel:+4571691925" data-i18n="callNow">Ring nu</a>
         </aside>
       </section>
 
-      <section class="quick-info" aria-label="Nogleinformation">
+      <section class="quick-info" aria-label="Nøgleinformation" data-i18n-attr="aria-label:keyInfoAria">
         <div>
-          <span>Adresse</span>
-          <strong>Smakkegårdsvej 173, st. mf</strong>
+          <span data-i18n="addressLabel">Adresse</span>
+          <strong data-i18n="addressLine">Smakkegårdsvej 173, st. mf</strong>
           <p>2820 Gentofte</p>
         </div>
         <div>
-          <span>Telefon</span>
+          <span data-i18n="phoneLabel">Telefon</span>
           <strong>71 69 19 25</strong>
-          <p>Book tid eller spørg om pris</p>
+          <p data-i18n="phoneHelp">Book tid eller spørg om pris</p>
         </div>
         <div>
-          <span>Kvalitet</span>
-          <strong>Grundig klipning</strong>
-          <p>God service fra start til finish</p>
+          <span data-i18n="qualityLabel">Kvalitet</span>
+          <strong data-i18n="qualityTitle">Grundig klipning</strong>
+          <p data-i18n="qualityText">God service fra start til finish</p>
         </div>
       </section>
 
       <section class="section services" id="services">
         <div class="section-heading">
-          <p class="eyebrow">Ydelser</p>
-          <h2>Fade, klip og skægtrim</h2>
-          <p>Enkel booking, tydelig aftale og et resultat der holder formen.</p>
+          <p class="eyebrow" data-i18n="servicesEyebrow">Ydelser</p>
+          <h2 data-i18n="servicesTitle">Fade, klip og skægtrim</h2>
+          <p data-i18n="servicesIntro">Enkel booking, tydelig aftale og et resultat der holder formen.</p>
         </div>
         <div class="service-grid">
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1593702233354-259d1f794ed1?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Barber arbejder med en ren nakke og fade">
+            <img src="https://images.unsplash.com/photo-1593702233354-259d1f794ed1?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Barber arbejder med en ren nakke og fade" data-i18n-attr="alt:service1Alt">
             <div>
               <span>01</span>
-              <h3>Herreklip</h3>
-              <p>Klassisk eller moderne klip med fokus på form, sider og finish.</p>
+              <h3 data-i18n="service1Title">Herreklip</h3>
+              <p data-i18n="service1Text">Klassisk eller moderne klip med fokus på form, sider og finish.</p>
             </div>
           </article>
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1514336937476-a5b961020a5c?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Tæt fade med skarp kant">
+            <img src="https://images.unsplash.com/photo-1514336937476-a5b961020a5c?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Tæt fade med skarp kant" data-i18n-attr="alt:service2Alt">
             <div>
               <span>02</span>
-              <h3>Fade</h3>
-              <p>Low, mid eller high fade med rene overgange og skarp nakke.</p>
+              <h3 data-i18n="service2Title">Fade</h3>
+              <p data-i18n="service2Text">Low, mid eller high fade med rene overgange og skarp nakke.</p>
             </div>
           </article>
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1531835415135-698b8d7e0ba4?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Rolig barbersalon med moderne udtryk">
+            <img src="https://images.unsplash.com/photo-1531835415135-698b8d7e0ba4?auto=format&fit=crop&fm=jpg&q=72&w=1000" alt="Rolig barbersalon med moderne udtryk" data-i18n-attr="alt:service3Alt">
             <div>
               <span>03</span>
-              <h3>Skægtrim</h3>
-              <p>Trim, kanter og styling så skægget matcher frisuren.</p>
+              <h3 data-i18n="service3Title">Skægtrim</h3>
+              <p data-i18n="service3Text">Trim, kanter og styling så skægget matcher frisuren.</p>
             </div>
           </article>
         </div>
       </section>
 
       <section class="section split">
-        <div class="price-board" aria-label="Pris og booking">
-          <p class="eyebrow">Book tid</p>
-          <h2>Priser</h2>
-          <div class="price-list" aria-label="Prisliste">
-            <div><span>Herre klip</span><strong>250 kr</strong></div>
-            <div><span>Skin fade</span><strong>300 kr</strong></div>
-            <div><span>Pensionist</span><strong>230 kr</strong></div>
-            <div><span>Børn, pige og dreng (5-11 år)</span><strong>230 kr</strong></div>
-            <div><span>Far &amp; barn</span><strong>450 kr</strong></div>
-            <div><span>Alm. maskineklip</span><strong>180 kr</strong></div>
-            <div><span>Maskine klip med fade</span><strong>200 kr</strong></div>
-            <div><span>Vask</span><strong>70 kr</strong></div>
-            <div><span>Pandehår</span><strong>70 kr</strong></div>
+        <div class="price-board" aria-label="Pris og booking" data-i18n-attr="aria-label:priceAria">
+          <p class="eyebrow" data-i18n="bookTime">Book tid</p>
+          <h2 data-i18n="pricesTitle">Priser</h2>
+          <div class="price-list" aria-label="Prisliste" data-i18n-attr="aria-label:priceListAria">
+            <div><span data-i18n="priceMen">Herre klip</span><strong>250 kr</strong></div>
+            <div><span data-i18n="priceFade">Skin fade</span><strong>300 kr</strong></div>
+            <div><span data-i18n="priceSenior">Pensionist</span><strong>230 kr</strong></div>
+            <div><span data-i18n="priceChildren">Børn, pige og dreng (5-11 år)</span><strong>230 kr</strong></div>
+            <div><span data-i18n="priceFatherChild">Far &amp; barn</span><strong>450 kr</strong></div>
+            <div><span data-i18n="priceMachine">Alm. maskineklip</span><strong>180 kr</strong></div>
+            <div><span data-i18n="priceMachineFade">Maskine klip med fade</span><strong>200 kr</strong></div>
+            <div><span data-i18n="priceWash">Vask</span><strong>70 kr</strong></div>
+            <div><span data-i18n="priceFringe">Pandehår</span><strong>70 kr</strong></div>
           </div>
-          <p class="price-note">Med og uden bestillingstider. Ring for at booke eller høre om ledige tider.</p>
+          <p class="price-note" data-i18n="priceNote">Med og uden bestillingstider. Ring for at booke eller høre om ledige tider.</p>
           <div class="booking-options">
-            <a href="tel:+4571691925">Ring 71 69 19 25</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=HF%20Cut%20Fris%C3%B8r%20Smakkeg%C3%A5rdsvej%20173%202820%20Gentofte" target="_blank" rel="noreferrer">Find vej</a>
+            <a href="tel:+4571691925" data-i18n="callPhone">Ring 71 69 19 25</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=HF%20Cut%20Fris%C3%B8r%20Smakkeg%C3%A5rdsvej%20173%202820%20Gentofte" target="_blank" rel="noreferrer" data-i18n="directions">Find vej</a>
           </div>
         </div>
         <div class="notes">
-          <h2>Godt at vide</h2>
+          <h2 data-i18n="goodToKnow">Godt at vide</h2>
           <ul>
-            <li>Kom gerne med referencebillede, hvis du vil ramme en bestemt fade eller længde.</li>
-            <li>Skal du have både klip og skæg, så sig det ved booking.</li>
-            <li>Salonen ligger lokalt på Smakkegårdsvej med nem adgang fra Gentofte.</li>
+            <li data-i18n="note1">Kom gerne med referencebillede, hvis du vil ramme en bestemt fade eller længde.</li>
+            <li data-i18n="note2">Skal du have både klip og skæg, så sig det ved booking.</li>
+            <li data-i18n="note3">Salonen ligger lokalt på Smakkegårdsvej med nem adgang fra Gentofte.</li>
           </ul>
         </div>
       </section>
 
       <section class="section reviews" id="reviews">
         <div class="review-summary">
-          <p class="eyebrow">Google anmeldelser</p>
-          <h2>5-stjernede ord fra kunderne</h2>
+          <p class="eyebrow" data-i18n="reviewsEyebrow">Google anmeldelser</p>
+          <h2 data-i18n="reviewsTitle">5-stjernede ord fra kunderne</h2>
           <div class="google-rating" aria-label="Google rating">
             <span class="google-g">G</span>
             <div>
               <strong>Google Reviews</strong>
-              <p><span aria-label="4,9 ud af 5 på Google">★★★★★</span> 4,9 rating på Google</p>
+              <p><span aria-label="4,9 ud af 5 på Google" data-i18n-attr="aria-label:googleStarsAria">★★★★★</span> <span data-i18n="googleRating">4,9 rating på Google</span></p>
             </div>
           </div>
-          <a class="button primary" href="https://www.google.com/search?q=HF+Cut+Fris%C3%B8r+Anmeldelser" target="_blank" rel="noreferrer">Se Google anmeldelser</a>
+          <a class="button primary" href="https://www.google.com/search?q=HF+Cut+Fris%C3%B8r+Anmeldelser" target="_blank" rel="noreferrer" data-i18n="seeGoogleReviews">Se Google anmeldelser</a>
         </div>
-        <div class="google-box" aria-label="Udvalgte Google anmeldelser">
+        <div class="google-box" aria-label="Udvalgte Google anmeldelser" data-i18n-attr="aria-label:reviewBoxAria">
           <article class="google-review">
             <div class="review-top">
               <strong>Kristian</strong>
             </div>
-            <p class="stars" aria-label="5 stjerner">★★★★★</p>
-            <blockquote>De er super nice. Altid smilende og gør sig virkelig umage med dit hår.</blockquote>
+            <p class="stars" aria-label="5 stjerner" data-i18n-attr="aria-label:fiveStarsAria">★★★★★</p>
+            <blockquote data-i18n="reviewKristian">De er super nice. Altid smilende og gør sig virkelig umage med dit hår.</blockquote>
           </article>
           <article class="google-review">
             <div class="review-top">
               <strong>Torben Jakobsen</strong>
             </div>
-            <p class="stars" aria-label="5 stjerner">★★★★★</p>
-            <blockquote>Vi er super glade for at komme hos HF Cut. Både jeg og mine to drenge får altid flotte frisurer.</blockquote>
+            <p class="stars" aria-label="5 stjerner" data-i18n-attr="aria-label:fiveStarsAria">★★★★★</p>
+            <blockquote data-i18n="reviewTorben">Vi er super glade for at komme hos HF Cut. Både jeg og mine to drenge får altid flotte frisurer.</blockquote>
           </article>
           <article class="google-review">
             <div class="review-top">
               <strong>Sebastian Weesgaard</strong>
             </div>
-            <p class="stars" aria-label="5 stjerner">★★★★★</p>
-            <blockquote>Endelig en god frisør med en super fair pris, og klippet var helt perfekt.</blockquote>
+            <p class="stars" aria-label="5 stjerner" data-i18n-attr="aria-label:fiveStarsAria">★★★★★</p>
+            <blockquote data-i18n="reviewSebastian">Endelig en god frisør med en super fair pris, og klippet var helt perfekt.</blockquote>
           </article>
           <article class="google-review">
             <div class="review-top">
               <strong>Rolf Sæ</strong>
             </div>
-            <p class="stars" aria-label="5 stjerner">★★★★★</p>
-            <blockquote>Dygtige og utrolig venlige frisører. Og så er det tilmed rørende billigt.</blockquote>
+            <p class="stars" aria-label="5 stjerner" data-i18n-attr="aria-label:fiveStarsAria">★★★★★</p>
+            <blockquote data-i18n="reviewRolf">Dygtige og utrolig venlige frisører. Og så er det tilmed rørende billigt.</blockquote>
           </article>
         </div>
       </section>
 
       <section class="section hours-contact" id="hours">
         <div>
-          <p class="eyebrow">Åbningstider</p>
-          <h2>Planlæg dit besøg</h2>
+          <p class="eyebrow" data-i18n="hoursEyebrow">Åbningstider</p>
+          <h2 data-i18n="hoursTitle">Planlæg dit besøg</h2>
           <ol class="hours-list" data-hours>
-            <li data-day="1"><span>Mandag</span><strong>10:00 - 18:00</strong></li>
-            <li data-day="2"><span>Tirsdag</span><strong>Lukket</strong></li>
-            <li data-day="3"><span>Onsdag</span><strong>10:00 - 18:00</strong></li>
-            <li data-day="4"><span>Torsdag</span><strong>10:00 - 18:00</strong></li>
-            <li data-day="5"><span>Fredag</span><strong>10:00 - 18:00</strong></li>
-            <li data-day="6"><span>Lørdag</span><strong>10:00 - 16:00</strong></li>
-            <li data-day="0"><span>Søndag</span><strong>10:00 - 15:00</strong></li>
+            <li data-day="1"><span data-i18n="monday">Mandag</span><strong>10:00 - 18:00</strong></li>
+            <li data-day="2"><span data-i18n="tuesday">Tirsdag</span><strong data-i18n="closed">Lukket</strong></li>
+            <li data-day="3"><span data-i18n="wednesday">Onsdag</span><strong>10:00 - 18:00</strong></li>
+            <li data-day="4"><span data-i18n="thursday">Torsdag</span><strong>10:00 - 18:00</strong></li>
+            <li data-day="5"><span data-i18n="friday">Fredag</span><strong>10:00 - 18:00</strong></li>
+            <li data-day="6"><span data-i18n="saturday">Lørdag</span><strong>10:00 - 16:00</strong></li>
+            <li data-day="0"><span data-i18n="sunday">Søndag</span><strong data-i18n="closed">Lukket</strong></li>
           </ol>
         </div>
         <div class="contact-card" id="contact">
-          <h2>HF Cut Frisør</h2>
-          <p>Smakkegårdsvej 173, st. mf<br>2820 Gentofte</p>
+          <h2 data-i18n="brandName">HF Cut Frisør</h2>
+          <p><span data-i18n="addressLine">Smakkegårdsvej 173, st. mf</span><br>2820 Gentofte</p>
           <a href="tel:+4571691925">71 69 19 25</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=HF%20Cut%20Fris%C3%B8r%20Smakkeg%C3%A5rdsvej%20173%202820%20Gentofte" target="_blank" rel="noreferrer">Åbn i Google Maps</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=HF%20Cut%20Fris%C3%B8r%20Smakkeg%C3%A5rdsvej%20173%202820%20Gentofte" target="_blank" rel="noreferrer" data-i18n="openMaps">Åbn i Google Maps</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>HF Cut Frisør - Smakkegårdsvej 173, st. mf, 2820 Gentofte</p>
-      <a href="tel:+4571691925">Book tid: 71 69 19 25</a>
+      <p data-i18n="footerText">HF Cut Frisør - Smakkegårdsvej 173, st. mf, 2820 Gentofte</p>
+      <a href="tel:+4571691925" data-i18n="footerBook">Book tid: 71 69 19 25</a>
     </footer>
 
     <script src="script.js"></script>

@@ -136,6 +136,10 @@ a {
   background: rgba(27, 27, 26, 0.32);
 }
 
+.language-switch-mobile {
+  display: none;
+}
+
 .lang-button {
   display: inline-flex;
   align-items: center;
@@ -654,7 +658,8 @@ h3 {
   }
 
   .site-nav,
-  .header-cta {
+  .header-cta,
+  .language-switch-desktop {
     display: none;
   }
 
@@ -690,8 +695,10 @@ h3 {
     border-bottom: 1px solid rgba(255, 253, 248, 0.1);
   }
 
-  .language-switch {
-    justify-self: end;
+  .site-header.is-open .language-switch-mobile {
+    display: inline-flex;
+    justify-self: start;
+    margin: 14px 22px 18px;
   }
 
   .booking-panel {
@@ -740,19 +747,6 @@ h3 {
     height: 46px;
   }
 
-  .language-switch {
-    gap: 2px;
-    padding: 3px;
-  }
-
-  .lang-button {
-    min-height: 34px;
-    padding: 0 8px;
-  }
-
-  .lang-button span:last-child {
-    display: none;
-  }
 
   .hero {
     min-height: auto;

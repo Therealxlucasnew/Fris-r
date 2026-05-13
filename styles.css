@@ -17,6 +17,9 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -25,7 +28,10 @@ body {
   color: var(--ink);
   font-family: Inter, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  max-width: 100%;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
 }
 
 img {

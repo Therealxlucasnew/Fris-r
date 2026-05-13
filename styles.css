@@ -405,7 +405,35 @@ h3 {
   border-color: rgba(184, 138, 68, 0.32);
 }
 
-.service-card img {
+.service-placeholder {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  background: #eee9df;
+  border-bottom: 1px solid rgba(27, 27, 26, 0.08);
+  transition: background 260ms ease;
+}
+
+.service-placeholder svg {
+  width: 82px;
+  height: 82px;
+  color: rgba(27, 27, 26, 0.48);
+  overflow: visible;
+  transition: transform 260ms ease, color 260ms ease;
+}
+
+.service-placeholder path,
+.service-placeholder circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.service-card img,
+.service-card-photo {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -413,12 +441,22 @@ h3 {
   transition: transform 420ms ease, filter 420ms ease;
 }
 
-.service-card:hover img {
+.service-card:hover .service-placeholder {
+  background: #e7dfd2;
+}
+
+.service-card:hover .service-placeholder svg {
+  color: rgba(27, 27, 26, 0.64);
+  transform: scale(1.04);
+}
+
+.service-card:hover img,
+.service-card:hover .service-card-photo {
   transform: scale(1.05);
   filter: saturate(1.02) contrast(1.08);
 }
 
-.service-card div {
+.service-card > div:not(.service-placeholder) {
   padding: 24px;
 }
 

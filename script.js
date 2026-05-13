@@ -79,7 +79,7 @@ const translations = {
     goodToKnow: "Godt at vide",
     note1: "Kom gerne med referencebillede, hvis du vil ramme en bestemt fade eller længde.",
     note2: "Skal du have både klip og skæg, så sig det ved booking.",
-    note3: "Salonen ligger lokalt på Smakkegårdsvej med nem adgang fra Gentofte.",
+    note3: "Salonen ligger lokalt på Smakkegårdsvej med nem adgang fra Jærgersborg St.",
     bookingEyebrow: "Online booking",
     bookingSectionTitle: "Book din tid hos HF Cut",
     bookingSectionText: "Vælg behandling og ledig tid direkte her på siden.",

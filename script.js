@@ -1,6 +1,20 @@
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener("load", () => {
+  if (!window.location.hash) {
+    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: "instant" }), 0);
+  }
+});
+
 const translations = {
   da: {
     metaDescription: "HF Cut Frisør i Gentofte. Skarp klipning, fade og skægtrim på Smakkegårdsvej 173. Book tid på telefon 71 69 19 25.",
@@ -9,6 +23,7 @@ const translations = {
     menuAria: "Åbn menu",
     languageAria: "Vælg sprog",
     brandName: "HF Cut Frisør",
+    brandMobileName: "HF Cut",
     brandSub: "Frisør / Barber",
     navServices: "Ydelser",
     navReviews: "Anmeldelser",
@@ -103,6 +118,7 @@ const translations = {
     menuAria: "Open menu",
     languageAria: "Choose language",
     brandName: "HF Cut Barber",
+    brandMobileName: "HF Cut",
     brandSub: "Hairdresser / Barber",
     navServices: "Services",
     navReviews: "Reviews",
@@ -216,6 +232,7 @@ const applyLanguage = (language) => {
   });
 
   localStorage.setItem("hf-cut-language", language);
+  document.querySelector(".brand")?.style.setProperty("--mobile-brand-name", `"${dictionary.brandMobileName}"`);
 };
 
 const updateHeader = () => {

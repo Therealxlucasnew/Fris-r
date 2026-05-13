@@ -793,11 +793,18 @@ h3 {
 
 @media (max-width: 980px) {
   .site-header {
-    grid-template-columns: minmax(0, 1fr) auto;
-    justify-content: stretch;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
     gap: 12px;
     width: 100%;
-    padding-right: 82px;
+    min-height: 82px;
+    padding: 12px 82px 12px 18px;
+  }
+
+  .site-header .brand {
+    grid-column: 2;
+    justify-self: center;
+    max-width: 180px;
   }
 
   .site-nav,
@@ -810,14 +817,15 @@ h3 {
     position: fixed;
     top: 18px;
     right: 18px;
-    z-index: 25;
+    z-index: 120;
     display: grid !important;
     width: 46px;
     height: 46px;
     place-items: center;
     border: 1px solid rgba(255, 253, 248, 0.3);
     border-radius: var(--radius);
-    background: transparent;
+    background: rgba(27, 27, 26, 0.56);
+    backdrop-filter: blur(8px);
   }
 
   .nav-toggle span {
@@ -877,6 +885,7 @@ h3 {
 @media (max-width: 640px) {
   .brand {
     min-width: 0;
+    gap: 10px;
   }
 
   .brand small {
@@ -884,10 +893,22 @@ h3 {
   }
 
   .brand strong {
-    max-width: 96px;
+    max-width: none;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 18px;
+  }
+
+  .brand strong::before {
+    content: var(--mobile-brand-name, "HF Cut");
+  }
+
+  .brand strong {
+    font-size: 0;
+  }
+
+  .brand strong::before {
+    font-size: 18px;
   }
 
   .brand-logo {

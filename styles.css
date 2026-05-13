@@ -831,6 +831,9 @@ h3 {
     background: rgba(27, 27, 26, 0.56);
     backdrop-filter: blur(8px);
     cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
   }
 
